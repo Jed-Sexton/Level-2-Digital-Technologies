@@ -48,6 +48,7 @@ body {
   margin-left: 50px;
   margin-top: 0px;
   margin-bottom: 0px;
+  padding: 0px;
 }
 
 .Website_name:hover {
@@ -70,12 +71,14 @@ body {
 
 .Home_images {
   display: flex;
-  gap: 100px;
-  max-width: 800px;
-  width: 15vw;
+  gap: 10px;
+  max-width: 1000px;
+  width: 20vw;
   flex-direction: column;
   margin-top: 100px;
+  margin-bottom: 100px;
   margin-right: 100px;
+  justify-content: space-between;
 }
 
 .Home_images img {
@@ -83,7 +86,25 @@ body {
   height: auto;
 }
 
+@media (max-width: 768px) {
+  .Home_images {
+    display: none;
+  }
+}
+
 .Main_content {
   display: flex;
   justify-content: space-between;
+}
+
+.Home_footer {
+  background-color: #4d7d7d;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
