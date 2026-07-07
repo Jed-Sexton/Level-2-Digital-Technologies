@@ -19,17 +19,17 @@ body {
   font-weight: 100;
 }
 
-.Home_heading {
+.Welcome_heading {
   font-size: 30px;
   font-weight: 1000;
 }
 
-.Home_quote {
+.Welcome_quote {
   font-size: 40px;
   font-weight: 1000;
 }
 
-.Home_navbar {
+.Welcome_navbar {
   background-color: #4d7d7d;
   margin-top: 0px;
   margin-left: 0px;
@@ -41,7 +41,7 @@ body {
   align-items: center;
 }
 
-.Home_name {
+.Welcome_name {
   font-size: 40px;
   letter-spacing: 20px;
   font-family: 'Open Sans', sans-serif;
@@ -68,7 +68,7 @@ body {
   color: #d9fafa;
 }
 
-.Home_images {
+.Welcome_images {
   display: flex;
   gap: 10px;
   max-width: 1000px;
@@ -80,13 +80,13 @@ body {
   justify-content: space-between;
 }
 
-.Home_images img {
+.Welcome_images img {
   border-radius: 1000px;
   height: auto;
 }
 
 @media (max-width: 768px) {
-  .Home_images {
+  .Welcome_images {
     display: none;
   }
 }
@@ -96,7 +96,7 @@ body {
   justify-content: space-between;
 }
 
-.Home_footer {
+.Footer {
   background-color: #4d7d7d;
   margin-bottom: 0px;
   margin-right: 0px;
