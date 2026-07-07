@@ -171,3 +171,10 @@ body {
 .Footer_third_column {
   color: black;
 }
+
+.Third_footer_text {
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: block;
+}
