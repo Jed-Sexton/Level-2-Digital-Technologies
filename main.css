@@ -50,11 +50,17 @@ body {
   margin-bottom: 0px;
 }
 
+.Website_name {
+  color: black;
+  text-decoration: none;
+  margin-right: 50px;
+}
+
 .Website_name:hover {
   color: #d9fafa;
 }
 
-.Signin_button {
+.Navbar_button {
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
   margin-right: 50px;
@@ -62,9 +68,15 @@ body {
   margin-bottom: 0px;
   text-align: right;
   font-weight: bold;
+  color: black;
+  text-decoration: none;
 }
 
-.Signin_name:hover {
+.Invisible_underscore {
+  color: #4d7d7d;
+}
+
+.Navbar_button:hover {
   color: #d9fafa;
 }
 
@@ -106,7 +118,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 30px;
+  gap: 25px;
   width: 100%;
   box-sizing: border-box;
 }
