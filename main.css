@@ -178,3 +178,18 @@ body {
   margin-bottom: 0px;
   display: block;
 }
+
+.Home_welcome {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.Quote_attribution {
+  font-weight: normal;
+  font-size: 20px;
+}
