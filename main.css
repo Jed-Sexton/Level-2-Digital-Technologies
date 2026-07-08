@@ -1,4 +1,4 @@
-@import url('https://googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
 body {
   background-color: #d9fafa;
@@ -217,9 +217,40 @@ body {
 }
 
 .Home_images img {
-  flex: 1;
   min-width: 100px;
-  max-width: 500px;
   height: auto;
   object-fit: contain;
+  width: 100%;
+  max-width: 250px;
+}
+
+.Home_images a {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.Current_screen_navbar_button {
+  color: #d9fafa;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  margin-right: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: right;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.Progress_text {
+  color: black;
+  font-size: 40px;
+  font-family: 'Open Sans', sans-serif;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 200px;
+  margin-bottom: 200px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
 }
