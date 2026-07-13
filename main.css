@@ -133,8 +133,6 @@ body {
   box-sizing: border-box;
 }
 
-
-
 .Footer_title,
 .Second_footer_title,
 .Third_footer_title {
@@ -207,27 +205,31 @@ body {
 }
 
 .Home_images {
-  display: flex;
-  gap: 5%;
-  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+
   width: 90%;
-  flex-direction: row;
-  justify-content: center;
+  max-width: 1200px;
+
   margin: 80px auto;
 }
 
-.Home_images img {
-  min-width: 100px;
-  height: auto;
-  object-fit: contain;
-  width: 100%;
-  max-width: 250px;
-}
-
 .Home_images a {
-  flex: 1;
   display: flex;
   justify-content: center;
+}
+
+.Home_images img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.Home_images img:hover {
+  transform: scale(1.05);
 }
 
 .Current_screen_navbar_button {
@@ -255,17 +257,34 @@ body {
   text-decoration: none;
 }
 
+.Subject_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
 .Subject_button {
   border: none;
   background: none;
   padding: 0;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 
 .Subject_button img {
-  width: 200px;
+  width: 100%;
+  max-width: 250px;
   height: auto;
   display: block;
+  transition: transform 0.2s ease;
+}
+
+.Subject_button:hover img {
+  transform: scale(1.05);
 }
 
 .Popup {
@@ -304,4 +323,10 @@ body {
 
 .Close_button:hover {
   background: #3d6666;
+}
+
+#equipmentList {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
 }

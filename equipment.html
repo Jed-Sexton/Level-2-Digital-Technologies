@@ -23,17 +23,66 @@
       "Preparation is the foundation of success."<br>
       <span class="Quote_attribution">Alexander Graham Bell</span>
     </div>
-      <button class="Subject_button" onclick="openPopup()">
+    <div class="Subject_grid">
+      <button class="Subject_button" onclick="openPopup('Mathematics')">
         <img src="Website_Images/2DIGT_Equipment_Maths.png" alt="Mathematics">
       </button>
-    <div>
+      <button class="Subject_button" onclick="openPopup('English')">
+        <img src="Website_Images/2DIGT_Equipment_English.png" alt="English">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Biology')">
+        <img src="Website_Images/2DIGT_Equipment_Biology.png" alt="Biology">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Chemistry')">
+        <img src="Website_Images/2DIGT_Equipment_Chemistry.png" alt="Chemistry">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Physics')">
+        <img src="Website_Images/2DIGT_Equipment_Physics.png" alt="Physics">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Digital Technologies')">
+        <img src="Website_Images/2DIGT_Equipment_Digital.png" alt="Digital Technologies">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Design & Visual Communicationw')">
+        <img src="Website_Images/2DIGT_Equipment_DVC.png" alt="Design & Visual Communications">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Physical Education')">
+        <img src="Website_Images/2DIGT_Equipment_PE.png" alt="Physical Education">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Health')">
+        <img src="Website_Images/2DIGT_Equipment_Health.png" alt="Health">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Music')">
+        <img src="Website_Images/2DIGT_Equipment_Music.png" alt="Music">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Geography')">
+        <img src="Website_Images/2DIGT_Equipment_Geography.png" alt="Geography">
+      </button>
+      <button class="Subject_button" onclick="openPopup('History')">
+        <img src="Website_Images/2DIGT_Equipment_History.png" alt="History">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Business')">
+        <img src="Website_Images/2DIGT_Equipment_Business.png" alt="Business">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Spanish')">
+        <img src="Website_Images/2DIGT_Equipment_Spanish.png" alt="Spanish">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Design')">
+        <img src="Website_Images/2DIGT_Equipment_Design.png" alt="Design">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Painting')">
+        <img src="Website_Images/2DIGT_Equipment_Painting.png" alt="Painting">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Photography')">
+        <img src="Website_Images/2DIGT_Equipment_Photography.png" alt="Photography">
+      </button>
+      <button class="Subject_button" onclick="openPopup('Religious Education')">
+        <img src="Website_Images/2DIGT_Equipment_Religious.png" alt="Religious Education">
+      </button>
+    </div>
     <div id="popup" class="Popup">
       <div class="Popup_box">
-        <h2>MATHEMATICS</h2>
-        <p>Scientific Calculator</p>
-        <p>Exercise Book</p>
-        <p>Pencil</p>
-        <p>Ruler</p>
+        <h2 id="subjectTitle"></h2>
+        <ul id="equipmentList"></ul>
         <button class="Close_button" onclick="closePopup()">
           Close
         </button>   
