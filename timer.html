@@ -25,11 +25,31 @@
     </div>
     <div class="Study_timer_page">
       <div class="Timer_ring">
+        <svg class="Progress_ring" viewBox="0 0 500 500">
+          <circle
+            class="Progress_ring_background"
+            cx="250"
+            cy="250"
+            r="215">
+          </circle>     
+          <circle
+            class="Progress_ring_circle"
+            cx="250"
+            cy="250"
+            r="215">
+          </circle>
+        </svg>    
         <div class="Timer_centre">
-          <div class="Timer_display" id="timerDisplay">
-            00:00
+          <div class="Timer_text">
+            <div class="Timer_display" id="timerDisplay">
+              00:00
+            </div>
+          
+            <div class="Timer_focus">
+              FOCUS
+            </div>
           </div>
-        </div>
+        </div>  
       </div>
       <div class="Timer_buttons">
         <button class="Timer_button" id="durationButton">

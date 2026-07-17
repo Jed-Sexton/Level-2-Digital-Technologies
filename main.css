@@ -339,20 +339,40 @@ body {
 }
 
 .Timer_ring {
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  border: 35px solid #4d7d7d;
-  box-sizing: border-box;
+  width: min(500px, 40vw);
+  height: min(500px, 40vw);
+  position: relative;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.Progress_ring {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotate(-90deg);
+}
+
+.Progress_ring_background {
+  fill: none;
+  stroke: #97c5c6;
+  stroke-width: 70;
+}
+
+.Progress_ring_circle {
+  fill: none;
+  stroke: #4d7d7d;
+  stroke-width: 70;
+  stroke-linecap: round;
+  stroke-dasharray: 1351;
+  stroke-dashoffset: 0;
+}
+
 .Timer_centre {
-  width: 360px;
-  height: 360px;
+  width: 72%;
+  height: 72%;
   border-radius: 50%;
   background-color: #d9fafa;
   display: flex;
@@ -360,17 +380,32 @@ body {
   align-items: center;
 }
 
+.Timer_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .Timer_display {
   font-family: 'Open Sans', sans-serif;
-  font-size: 80px;
+  font-size: 6vw;
   font-weight: bold;
   color: black;
+}
+
+.Timer_focus {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2vw;
+  font-weight: normal;
+  color: black;
+  margin-top: 10px;
 }
 
 .Timer_buttons {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 2vw;
 }
 
 .Timer_button {
@@ -381,7 +416,9 @@ body {
 }
 
 .Timer_button img {
-  width: 140px;
+  width: 6vw;
+  max-width: 140px;
+  min-width: 70px;
   display: block;
 }
 
