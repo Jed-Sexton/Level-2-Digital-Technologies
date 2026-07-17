@@ -208,10 +208,9 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 30px;
-
+  cursor: pointer;
   width: 90%;
   max-width: 1200px;
-
   margin: 80px auto;
 }
 
@@ -329,4 +328,77 @@ body {
   list-style: none;
   padding: 0;
   margin: 20px 0;
+}
+
+.Study_timer_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin: 80px auto;
+}
+
+.Timer_ring {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 35px solid #4d7d7d;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Timer_centre {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background-color: #d9fafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Timer_display {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: black;
+}
+
+.Timer_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.Timer_button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.Timer_button img {
+  width: 140px;
+  display: block;
+}
+
+.Timer_button img {
+  transition: transform 0.2s ease;
+}
+
+.Timer_button:hover img {
+  transform: scale(1.05);
+}
+
+.Home_welcome_centre {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-weight: bold;
+  font-size: 30px;
+  width: 90%;
+  margin: 50px auto;
+  text-align: center;
 }
