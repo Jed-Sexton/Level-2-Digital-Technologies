@@ -439,3 +439,32 @@ body {
   margin: 50px auto;
   text-align: center;
 }
+
+.Duration_menu {
+  position: relative;
+}
+
+.Duration_dropdown {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  flex-direction: column;
+  background: white;
+  border: 2px solid #4d7d7d;
+  border-radius: 12px;
+}
+
+.Duration_option {
+  padding: 12px 20px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  cursor: pointer;
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+
+.Duration_option:hover {
+  background-color: #d9fafa;
+  border-radius: 12px;
+}

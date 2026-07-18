@@ -190,3 +190,39 @@ function closePopup(){
   document.getElementById("popup").style.display = "none";
 
 }
+
+
+const durationButton = document.getElementById("durationButton");
+const durationDropdown = document.getElementById("durationDropdown");
+const timerDisplay = document.getElementById("timerDisplay");
+
+durationButton.addEventListener("click", function() {
+  if (durationDropdown.style.display === "flex") {
+    durationDropdown.style.display = "none";
+  } else {
+    durationDropdown.style.display = "flex";
+  }
+});
+
+const durationOptions = document.querySelectorAll(".Duration_option");
+
+durationOptions.forEach(function(option) {
+
+  option.addEventListener("click", function() {
+
+    let minutes = option.dataset.minutes;
+
+    let hours = Math.floor(minutes / 60);
+    let remainingMinutes = minutes % 60;
+
+    if (hours > 0) {
+      timerDisplay.textContent = hours + ":" + String(remainingMinutes).padStart(2, "0") + ":00";
+    } else {
+      timerDisplay.textContent = minutes + ":00";
+    }
+
+    durationDropdown.style.display = "none";
+
+  });
+
+});
