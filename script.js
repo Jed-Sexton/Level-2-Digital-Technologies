@@ -195,6 +195,12 @@ function closePopup(){
 const durationButton = document.getElementById("durationButton");
 const durationDropdown = document.getElementById("durationDropdown");
 const timerDisplay = document.getElementById("timerDisplay");
+const playPauseButton = document.getElementById("playPauseButton");
+const playPauseImage = document.getElementById("playPauseImage");
+let selectedDuration = 25 * 60;
+let remainingTime = selectedDuration;
+let timerRunning = false;
+let timerInterval;
 
 durationButton.addEventListener("click", function() {
   if (durationDropdown.style.display === "flex") {
@@ -211,6 +217,8 @@ durationOptions.forEach(function(option) {
   option.addEventListener("click", function() {
 
     let minutes = option.dataset.minutes;
+    selectedDuration = minutes * 60;
+    remainingTime = selectedDuration;
 
     let hours = Math.floor(minutes / 60);
     let remainingMinutes = minutes % 60;
@@ -224,5 +232,45 @@ durationOptions.forEach(function(option) {
     durationDropdown.style.display = "none";
 
   });
+
+});
+
+timerDisplay.textContent = "25:00";
+
+function updateTimer() {
+
+  if (remainingTime > 0) {
+
+    remainingTime--;
+
+    let minutes = Math.floor(remainingTime / 60);
+    let seconds = remainingTime % 60;
+
+    timerDisplay.textContent =
+      minutes + ":" + String(seconds).padStart(2, "0");
+
+  }
+
+}
+
+playPauseButton.addEventListener("click", function() {
+
+  if (timerRunning === false) {
+
+    timerRunning = true;
+
+    playPauseImage.src = "Website_Images/2DIGT_Timer_Playing.png";
+
+    timerInterval = setInterval(updateTimer, 1000);
+
+  } else {
+
+    timerRunning = false;
+
+    playPauseImage.src = "Website_Images/2DIGT_Timer_Paused.png";
+
+    clearInterval(timerInterval);
+
+  }
 
 });
