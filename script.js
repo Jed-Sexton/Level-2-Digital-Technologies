@@ -197,6 +197,7 @@ const durationDropdown = document.getElementById("durationDropdown");
 const timerDisplay = document.getElementById("timerDisplay");
 const playPauseButton = document.getElementById("playPauseButton");
 const playPauseImage = document.getElementById("playPauseImage");
+const resetButton = document.getElementById("resetButton");
 let selectedDuration = 25 * 60;
 let remainingTime = selectedDuration;
 let timerRunning = false;
@@ -272,5 +273,23 @@ playPauseButton.addEventListener("click", function() {
     clearInterval(timerInterval);
 
   }
+
+});
+
+resetButton.addEventListener("click", function() {
+
+  clearInterval(timerInterval);
+
+  timerRunning = false;
+
+  remainingTime = selectedDuration;
+
+  let minutes = Math.floor(remainingTime / 60);
+  let seconds = remainingTime % 60;
+
+  timerDisplay.textContent =
+    minutes + ":" + String(seconds).padStart(2, "0");
+
+  playPauseImage.src = "Website_Images/2DIGT_Timer_Paused.png";
 
 });
