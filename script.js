@@ -198,12 +198,14 @@ const timerDisplay = document.getElementById("timerDisplay");
 const playPauseButton = document.getElementById("playPauseButton");
 const playPauseImage = document.getElementById("playPauseImage");
 const resetButton = document.getElementById("resetButton");
+const progressRing = document.querySelector(".Progress_ring_circle");
 let selectedDuration = 25 * 60;
 let remainingTime = selectedDuration;
 let timerRunning = false;
 let timerInterval;
 
 durationButton.addEventListener("click", function() {
+  if (timerRunning) return;
   if (durationDropdown.style.display === "flex") {
     durationDropdown.style.display = "none";
   } else {
@@ -217,9 +219,13 @@ durationOptions.forEach(function(option) {
 
   option.addEventListener("click", function() {
 
+    if (timerRunning) return;
+
     let minutes = option.dataset.minutes;
     selectedDuration = minutes * 60;
     remainingTime = selectedDuration;
+
+    updateProgressRing();
 
     let hours = Math.floor(minutes / 60);
     let remainingMinutes = minutes % 60;
@@ -238,6 +244,8 @@ durationOptions.forEach(function(option) {
 
 timerDisplay.textContent = "25:00";
 
+updateProgressRing();
+
 function updateTimer() {
 
   if (remainingTime > 0) {
@@ -250,7 +258,28 @@ function updateTimer() {
     timerDisplay.textContent =
       minutes + ":" + String(seconds).padStart(2, "0");
 
+    updateProgressRing();
+
+  } else {
+
+    clearInterval(timerInterval);
+
+    timerRunning = false;
+
+    playPauseImage.src = "Website_Images/2DIGT_Timer_Paused.png";
+
   }
+
+}
+
+function updateProgressRing() {
+
+  const circumference = 1351;
+
+  const progress = remainingTime / selectedDuration;
+
+  progressRing.style.strokeDashoffset =
+    circumference * (1 - progress);
 
 }
 
@@ -283,6 +312,8 @@ resetButton.addEventListener("click", function() {
   timerRunning = false;
 
   remainingTime = selectedDuration;
+
+  updateProgressRing();
 
   let minutes = Math.floor(remainingTime / 60);
   let seconds = remainingTime % 60;
