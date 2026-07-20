@@ -324,3 +324,14 @@ resetButton.addEventListener("click", function() {
   playPauseImage.src = "Website_Images/2DIGT_Timer_Paused.png";
 
 });
+
+document.addEventListener("click", function(event) {
+
+  if (!durationButton.contains(event.target) &&
+      !durationDropdown.contains(event.target)) {
+
+    durationDropdown.style.display = "none";
+
+  }
+
+});
