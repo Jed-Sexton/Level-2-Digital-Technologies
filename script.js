@@ -166,17 +166,13 @@ const equipment = {
 function openPopup(subject){
 
   document.getElementById("subjectTitle").textContent = subject;
-
   const list = document.getElementById("equipmentList");
-
   list.innerHTML = "";
 
   equipment[subject].forEach(function(item){
 
       const li = document.createElement("li");
-
       li.textContent = item;
-
       list.appendChild(li);
 
   });
@@ -218,9 +214,8 @@ const durationOptions = document.querySelectorAll(".Duration_option");
 durationOptions.forEach(function(option) {
 
   option.addEventListener("click", function() {
-
+    
     if (timerRunning) return;
-
     let minutes = option.dataset.minutes;
     selectedDuration = minutes * 60;
     remainingTime = selectedDuration;
@@ -235,7 +230,6 @@ durationOptions.forEach(function(option) {
     } else {
       timerDisplay.textContent = minutes + ":00";
     }
-
     durationDropdown.style.display = "none";
 
   });
@@ -243,7 +237,6 @@ durationOptions.forEach(function(option) {
 });
 
 timerDisplay.textContent = "25:00";
-
 updateProgressRing();
 
 function updateTimer() {
@@ -251,7 +244,6 @@ function updateTimer() {
   if (remainingTime > 0) {
 
     remainingTime--;
-
     let minutes = Math.floor(remainingTime / 60);
     let seconds = remainingTime % 60;
 
@@ -263,9 +255,7 @@ function updateTimer() {
   } else {
 
     clearInterval(timerInterval);
-
     timerRunning = false;
-
     playPauseImage.src = "Website_Images/2DIGT_Timer_Paused.png";
 
   }
@@ -275,9 +265,7 @@ function updateTimer() {
 function updateProgressRing() {
 
   const circumference = 1351;
-
   const progress = remainingTime / selectedDuration;
-
   progressRing.style.strokeDashoffset =
     circumference * (1 - progress);
 
@@ -288,17 +276,13 @@ playPauseButton.addEventListener("click", function() {
   if (timerRunning === false) {
 
     timerRunning = true;
-
     playPauseImage.src = "Website_Images/2DIGT_Timer_Playing.png";
-
     timerInterval = setInterval(updateTimer, 1000);
 
   } else {
 
     timerRunning = false;
-
     playPauseImage.src = "Website_Images/2DIGT_Timer_Paused.png";
-
     clearInterval(timerInterval);
 
   }
@@ -308,19 +292,13 @@ playPauseButton.addEventListener("click", function() {
 resetButton.addEventListener("click", function() {
 
   clearInterval(timerInterval);
-
   timerRunning = false;
-
   remainingTime = selectedDuration;
-
   updateProgressRing();
-
   let minutes = Math.floor(remainingTime / 60);
   let seconds = remainingTime % 60;
-
   timerDisplay.textContent =
     minutes + ":" + String(seconds).padStart(2, "0");
-
   playPauseImage.src = "Website_Images/2DIGT_Timer_Paused.png";
 
 });

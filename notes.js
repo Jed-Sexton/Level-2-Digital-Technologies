@@ -11,8 +11,23 @@ newNoteButton.addEventListener("click", function() {
 
   const newNote = document.createElement("div");
   newNote.classList.add("Note_item");
-  newNote.textContent = "New Note";
+  newNote.textContent = "Untitled Note";
+  newNote.dataset.title = "Untitled Note";
+  newNote.dataset.content = "";
 
   notesList.appendChild(newNote);
+
+});
+
+const noteItems = document.querySelectorAll(".Note_item");
+
+noteItems.forEach(note => {
+
+  note.addEventListener("click", function() {
+
+    noteTitle.value = note.dataset.title;
+    noteContent.value = note.dataset.content;
+
+  });
 
 });
