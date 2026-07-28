@@ -468,3 +468,138 @@ body {
   background-color: #d9fafa;
   border-radius: 12px;
 }
+
+.Notes_page {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  padding-left: 0px;
+}
+
+.Notes_sidebar {
+  width: 280px;
+  background-color: #97c5c6;
+  border-radius: 0 20px 20px 0;
+  padding: 20px 0;
+  min-height: 600px;
+  margin-left: 0px;
+}
+
+.Notes_editor {
+  flex: 1;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  min-height: 600px;
+}
+
+.Note_title {
+  width: 100%;
+  font-size: 32px;
+  font-weight: bold;
+  border: none;
+  background: transparent;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.Note_content {
+  width: 100%;
+  height: 450px;
+  border: none;
+  background: transparent;
+  outline: none;
+  resize: none;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+
+  .Notes_page {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .Notes_sidebar {
+    width: auto;
+    min-height: auto;
+    border-radius: 20px;
+  }
+
+  .Notes_editor {
+    width: auto;
+    padding: 20px;
+    min-height: 500px;
+  }
+
+  .Note_title {
+    font-size: 26px;
+  }
+
+  .Note_content {
+    height: 350px;
+    font-size: 16px;
+  }
+
+}
+
+.New_note_button {
+  width: calc(100% - 20px);
+  margin-right: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  background-color: #97c5c6;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+.New_note_button:hover {
+  background-color: #4d7d7d;
+}
+
+
+.Notes_list {
+  margin-top: 20px;
+}
+
+
+.Note_item {
+  background-color: #97c5c6;
+  padding: 10px;
+  padding-left: 50px;
+  border-radius: 0 50px 50px 0;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+}
+
+
+.Note_item:hover {
+  background-color: #4d7d7d;
+}
+
+.Save_button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  background-color: #97c5c6;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.Save_button:hover {
+  background-color: #4d7d7d;
+}
+
