@@ -20,7 +20,7 @@
   </div>
   <main class="Notes_page">
     <div class="Notes_sidebar">
-      <button class="New_note_button">
+      <button id="New_note_button" class="New_note_button">
         + NEW NOTE
       </button>
       <div class="Notes_list">
@@ -31,15 +31,17 @@
     </div>
     <div class="Notes_editor">
       <input
+        id="Note_title"
         type="text"
         class="Note_title"
         placeholder="Note Title">
       
         <textarea
+        id="Note_content"
         class="Note_content"
         placeholder="Start typing your notes here..."></textarea>
 
-      <button class="Save_button">
+      <button id="Save_button" class="Save_button">
         Save
       </button>
     </div>
@@ -83,6 +85,6 @@
       </span>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script src="notes.js"></script>
 </body>
 </html>
