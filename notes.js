@@ -19,7 +19,7 @@ newNoteButton.addEventListener("click", function() {
 
   setupNote(newNote);
   notesList.appendChild(newNote);
-
+  newNote.click();
 });
 
 function setupNote(note) {
@@ -57,19 +57,27 @@ deleteButton.addEventListener("click", function () {
     return;
   }
   currentNote.remove();
-  const remainingNotes = document.querySelectorAll(".Note_item");
-  if (remainingNotes.length === 0); {
-    const newNote = document.createElement("div");
-    newNote.classList.add("Note_item");
-    newNote.textContent = "Untitled Note";
-    newNote.dataset.title = "Untitled Note";
-    newNote.dataset.content = "";
-    setupNote(newNote);
-    notesList.appendChild(newNote);
-    newNote.click();
-  }
-  currentNote = null;
-  noteTitle.value = "";
-  noteContent.value = "";
 
+  const remainingNotes = document.querySelectorAll(".Note_item");
+
+  if (remainingNotes.length > 0) {
+    remainingNotes[0].click();
+  } else {
+
+  const newNote = document.createElement("div");
+  newNote.classList.add("Note_item");
+  newNote.textContent = "Untitled Note";
+  newNote.dataset.title = "Untitled Note";
+  newNote.dataset.content = "";
+
+  setupNote(newNote);
+  notesList.appendChild(newNote);
+
+  newNote.click();
+}
 });
+
+const firstNote = document.querySelector(".Note_item");
+if (firstNote) {
+  firstNote.click();
+}
