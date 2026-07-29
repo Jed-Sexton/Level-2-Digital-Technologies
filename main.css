@@ -596,7 +596,6 @@ body {
   cursor: pointer;
 }
 
-
 .Save_button:hover {
   background-color: #4d7d7d;
 }
@@ -604,4 +603,20 @@ body {
 .Active_note {
   background-color: #4d7d7d;
   color: white;
+}
+
+.Delete_button {
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  background-color: #97c5c6;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Delete_button:hover {
+  background-color: #4d7d7d;
 }

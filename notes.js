@@ -4,6 +4,7 @@ let currentNote = null;
 const noteContent = document.getElementById("Note_content");
 const notesList = document.querySelector(".Notes_list");
 const saveButton = document.getElementById("Save_button");
+const deleteButton = document.getElementById("Delete_button");
 
 newNoteButton.addEventListener("click", function() {
 
@@ -49,4 +50,26 @@ saveButton.addEventListener("click", function() {
   currentNote.dataset.title = noteTitle.value;
   currentNote.dataset.content = noteContent.value;
   currentNote.textContent = noteTitle.value;
+});
+
+deleteButton.addEventListener("click", function () {
+  if (currentNote === null) {
+    return;
+  }
+  currentNote.remove();
+  const remainingNotes = document.querySelectorAll(".Note_item");
+  if (remainingNotes.length === 0); {
+    const newNote = document.createElement("div");
+    newNote.classList.add("Note_item");
+    newNote.textContent = "Untitled Note";
+    newNote.dataset.title = "Untitled Note";
+    newNote.dataset.content = "";
+    setupNote(newNote);
+    notesList.appendChild(newNote);
+    newNote.click();
+  }
+  currentNote = null;
+  noteTitle.value = "";
+  noteContent.value = "";
+
 });
