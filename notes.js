@@ -1,8 +1,9 @@
 const newNoteButton = document.getElementById("New_note_button");
 const noteTitle = document.getElementById("Note_title");
+let currentNote = null;
 const noteContent = document.getElementById("Note_content");
 const notesList = document.querySelector(".Notes_list");
-
+const saveButton = document.getElementById("Save_button");
 
 newNoteButton.addEventListener("click", function() {
 
@@ -15,19 +16,30 @@ newNoteButton.addEventListener("click", function() {
   newNote.dataset.title = "Untitled Note";
   newNote.dataset.content = "";
 
+  setupNote(newNote);
   notesList.appendChild(newNote);
 
 });
 
+function setupNote(note) {
+  note.addEventListener("click", function() {
+    currentNote = note;
+    noteTitle.value = note.dataset.title;
+    noteContent.value = note.dataset.content;
+  });
+}
+
 const noteItems = document.querySelectorAll(".Note_item");
 
 noteItems.forEach(note => {
+  setupNote(note);
+});
 
-  note.addEventListener("click", function() {
-
-    noteTitle.value = note.dataset.title;
-    noteContent.value = note.dataset.content;
-
-  });
-
+saveButton.addEventListener("click", function() {
+  if (currentNote === null) {
+    return;
+  }
+  currentNote.dataset.title = noteTitle.value;
+  currentNote.dataset.content = noteContent.value;
+  currentNote.textContent = noteTitle.value;
 });
