@@ -601,3 +601,7 @@ body {
   background-color: #4d7d7d;
 }
 
+.Active_note {
+  background-color: #4d7d7d;
+  color: white;
+}

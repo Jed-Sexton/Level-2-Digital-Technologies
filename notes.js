@@ -24,6 +24,13 @@ newNoteButton.addEventListener("click", function() {
 function setupNote(note) {
   note.addEventListener("click", function() {
     currentNote = note;
+
+    document.querySelectorAll(".Note_item").forEach(item => {
+      item.classList.remove("Active_note");
+    });
+
+    note.classList.add("Active_note");
+
     noteTitle.value = note.dataset.title;
     noteContent.value = note.dataset.content;
   });
