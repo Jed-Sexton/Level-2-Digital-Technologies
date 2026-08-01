@@ -679,3 +679,11 @@ body {
 .Login_button:active {
   transform: scale(0.99);
 }
+
+.Login_error {
+  margin-top: 15px;
+  text-align: center;
+  color: #8a1916;
+  font-weight: bold;
+  min-height: 20px;
+}
