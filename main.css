@@ -698,7 +698,7 @@ body {
 .Task_input_card {
   background-color: #97c5c6;
   border-radius: 100px;
-  padding: 10px 20px;
+  padding: 5px 40px;
   margin-bottom: 40px;
   display: flex;
   align-items: center;
@@ -720,5 +720,80 @@ body {
     border-radius: 15px;
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
 }
 
+.Task_card {
+  background-color: #97c5c6;
+  border-radius: 100px;
+  padding: 5px 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.Task_subject {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.Subject_dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #4CAF50;
+}
+
+.Task_name {
+  flex: 1;
+  margin-left: 30px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.Task_due {
+  width: 90px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.Task_priority {
+  width: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.Task_status {
+  width: 80px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.Complete_button,
+.Delete_button {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: none;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1;
+    cursor: pointer;
+    color: black;
+}
+
+.Complete_button:hover,
+.Delete_button:hover {
+    transform: scale(1.15);
+    background-color: #97c5c6;
+}
