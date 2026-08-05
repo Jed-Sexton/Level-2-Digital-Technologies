@@ -31,36 +31,46 @@
       </div>
 
       <div class="Task_input_card">
-
-        <select id="subject">
-          <option>Maths</option>
-          <option>English</option>
-          <option>Chemistry</option>
-          <option>Biology</option>
-          <option>Physics</option>
-          <option>Business</option>
-          <option>DVC</option>
-          <option>Digital Tech</option>
-        </select>
-
-        <input
-          type="text"
-          id="task"
-          placeholder="Enter your task">
+        <div class="Input_subject">
+          <select id="subject">
+              <option>Maths</option>
+              <option>English</option>
+              <option>Chemistry</option>
+              <option>Biology</option>
+              <option>Physics</option>
+              <option>Business</option>
+              <option>DVC</option>
+              <option>Digital Tech</option>
+          </select>
+        </div>
         
-        <input
-          type="date"
-          id="dueDate">
-        
-        <select id="priority">
-          <option>High</option>
-          <option>Medium</option>
-          <option>Low</option>       
-        </select>
+        <div class="Input_task">
+          <input
+              type="text"
+              id="task"
+              placeholder="Enter your task">
+        </div>
 
-        <button id="addTask">
-          + Add Task
-        </button>
+        <div class="Input_due">
+          <input
+              type="date"
+              id="dueDate">
+        </div>
+        
+        <div class="Input_priority">
+          <select id="priority">
+              <option>High</option>
+              <option>Medium</option>
+              <option>Low</option>
+          </select>
+        </div>
+
+        <div class="Input_button">
+          <button id="addTask">
+              + Add Task
+          </button>
+        </div>
+
       </div>
 
       <div class="Task_heading">
@@ -100,9 +110,9 @@
           To Do
         </div>
 
-        <button class="Complete_button">&#10003;</button>
+        <button class="Todo_Complete_button">&#10003;</button>
 
-        <button class="Delete_button">&times;</button>
+        <button class="Todo_Delete_button">&times;</button>
 
       </div>
     </div>

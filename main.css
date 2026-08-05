@@ -735,7 +735,7 @@ body {
 .Task_subject {
   font-weight: bold;
   font-size: 16px;
-  width: 120px;
+  width: 130px;
 }
 
 .Subject_dot {
@@ -749,32 +749,54 @@ body {
 
 .Task_name {
   flex: 1;
-  margin-left: 30px;
   font-size: 15px;
   font-weight: bold;
 }
 
+input::placeholder {
+  color: black;
+  opacity: 1;
+}
+
 .Task_due {
-  width: 90px;
+  width: 140px;
   text-align: center;
   font-size: 15px;
   font-weight: bold;
 }
 
 .Task_priority {
-  width: 80px;
+  width: 100px;
   text-align: center;
   font-weight: bold;
 }
 
 .Task_status {
-  width: 80px;
+  width: 110px;
   text-align: center;
   font-weight: bold;
 }
 
-.Complete_button,
-.Delete_button {
+#addTask {
+  width: 100%;
+    padding: 12px 20px;
+    background-color: #4d7d7d;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#addTask:hover {
+  transform: scale(1.05);
+}
+
+.Todo_Complete_button,
+.Todo_Delete_button {
     width: 32px;
     height: 32px;
     display: flex;
@@ -784,6 +806,7 @@ body {
     margin: 0;
     background: none;
     border: none;
+    border-radius: 100px;
     font-size: 22px;
     font-family: 'Open Sans', sans-serif;
     line-height: 1;
@@ -791,10 +814,10 @@ body {
     color: black;
 }
 
-.Complete_button:hover,
-.Delete_button:hover {
+.Todo_Complete_button:hover,
+.Todo_Delete_button:hover {
     transform: scale(1.15);
-    background-color: #97c5c6;
+    background-color: #4d7d7d;
 }
 
 .Task_titles {
@@ -809,31 +832,71 @@ body {
   letter-spacing: 1px;
 }
 
+
+.Title_task {
+  flex: 1;
+}
+
 .Title_subject {
   width: 120px;
 }
 
-.Title_task {
-  flex: 1;
-  margin-left: 30px;
+.Title_subject {
+  width: 130px;
 }
 
 .Title_due {
-  width: 90px;
+  width: 140px;
   text-align: center;
 }
 
 .Title_priority {
-  width: 80px;
+  width: 100px;
   text-align: center;
 }
 
 .Title_status {
-  width: 80px;
+  width: 110px;
   text-align: center;
 }
 
 .Title_action {
   width: 32px;
   text-align: center;
+}
+
+.Input_subject {
+  width: 130px;
+}
+
+.Input_task {
+  flex: 1;
+}
+
+.Input_due {
+  width: 140px;
+}
+
+.Input_priority {
+  width: 100px;
+}
+
+.Input_button {
+  width: 190px;
+}
+
+.Input_subject select,
+.Input_task input,
+.Input_due input,
+.Input_priority select,
+.Input_button button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Input_due,
+.Title_due,
+.Task_due {
+    width: 140px;
+    text-align: center;
 }
