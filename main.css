@@ -923,3 +923,9 @@ input::placeholder {
     box-sizing: border-box;
 }
 }
+
+.Task_list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

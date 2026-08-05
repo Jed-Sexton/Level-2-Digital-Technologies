@@ -48,6 +48,7 @@
           <input
               type="text"
               id="task"
+              maxlength="60"
               placeholder="Enter your task">
         </div>
 
@@ -87,34 +88,8 @@
         <div class="Title_action">×</div>
       </div>
 
-      <div class="Task_card">
+      <div id="taskList" class="Task_list"></div>
 
-        <div class="Task_subject">
-          <span class="Subject_dot maths"></span>
-          Maths
-        </div>
-
-        <div class="Task_name">
-          Complete Algebra Pages 78 to 81
-        </div>
-
-        <div class="Task_due">
-          14 Aug
-        </div>
-
-        <div class="Task_priority">
-          High
-        </div>
-
-        <div class="Task_status">
-          To Do
-        </div>
-
-        <button class="Todo_Complete_button">&#10003;</button>
-
-        <button class="Todo_Delete_button">&times;</button>
-
-      </div>
     </div>
   </main>
   <div class="Footer">
@@ -156,7 +131,7 @@
       </span>
     </div>
   </div>
-  <script src="notes.js"></script>
+  <script src="todo.js"></script>
 </body>
 </html>
 
