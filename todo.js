@@ -1,5 +1,44 @@
 let tasks = [];
 
+const colours = {
+    blue: "#4A90E2",
+    red: "#E74C3C",
+    green: "#4CAF50",
+    yellow: "#F1C40F",
+    navy: "#2C3E8F",
+    purple: "#9B59B6",
+    orange: "#E67E22",
+    teal: "#26A69A",
+    pink: "#EC6BAA"
+};
+
+const subjectColours = {
+    "Mathematics": colours.blue,
+    "English": colours.red,
+    "Biology": colours.green,
+    "Chemistry": colours.yellow,
+    "Physics": colours.navy,
+    "Digital Technologies": colours.purple,
+    "Design & Visual Communication": colours.orange,
+    "Physical Education": colours.teal,
+    "Health": colours.green,
+    "Music": colours.pink,
+    "Geography": colours.green,
+    "History": colours.orange,
+    "Business": colours.yellow,
+    "Spanish": colours.red,
+    "Design": colours.orange,
+    "Painting": colours.pink,
+    "Photography": colours.blue,
+    "Religious Education": colours.purple
+};
+
+const statusOrder = {
+    "To Do": 1,
+    "In Progress": 1,
+    "Complete": 2
+};
+
 const subjectInput = document.getElementById("subject");
 const taskInput = document.getElementById("task");
 const dueDateInput = document.getElementById("dueDate");
@@ -36,8 +75,12 @@ const priorityOrder = {
 };
 
 function sortTasks() {
+
     tasks.sort(function(a, b){
-        if(a.dueDate !== b.dueDate){
+        if (statusOrder[a.status] !== statusOrder[b.status]) {
+            return statusOrder[a.status] - statusOrder[b.status];
+        }
+        if (a.dueDate !== b.dueDate) {
             return new Date(a.dueDate) - new Date(b.dueDate);
         }
         return priorityOrder[a.priority] - priorityOrder[b.priority];
@@ -56,10 +99,15 @@ function renderTasks() {
 
     taskCard.classList.add("Task_card");
 
+    if (task.status === "Complete") {
+        taskCard.classList.add("Completed_task");
+    }
 
       taskCard.innerHTML = `
         <div class="Task_subject">
-            <div class="Subject_dot"></div>
+            <div class="Subject_dot"
+                style="background-color: ${subjectColours[task.subject]}">
+            </div>
             ${task.subject}
         </div>
 

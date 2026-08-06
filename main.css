@@ -734,6 +734,11 @@ body {
   box-sizing: border-box;
 }
 
+.Completed_task {
+  background-color: #c5d8d8;
+  opacity: 0.8;
+}
+
 .Task_subject {
   width: 130px;
   font-weight: bold;
