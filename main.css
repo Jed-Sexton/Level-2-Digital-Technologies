@@ -929,3 +929,16 @@ input::placeholder {
   flex-direction: column;
   gap: 20px;
 }
+
+.Task_status select,
+.Task_priority select {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+}
