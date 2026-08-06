@@ -45,10 +45,39 @@ const dueDateInput = document.getElementById("dueDate");
 const priorityInput = document.getElementById("priority");
 const addTaskButton = document.getElementById("addTask");
 const taskList = document.getElementById("taskList");
+const taskError = document.getElementById("taskError");
 
 addTaskButton.addEventListener("click", addTask);
 
+dueDateInput.addEventListener("click", function () {
+    this.showPicker();
+});
+
+function showError(message) {
+    taskError.textContent = "⚠ " + message;
+    taskError.style.display = "block";
+    setTimeout(function(){
+        taskError.style.display = "none";
+    }, 3000);
+}
+
 function addTask() {
+
+    if (subjectInput.value === "") {
+        showError("Please select a subject.");
+        return;
+    }
+
+    if (taskInput.value.trim() === "") {
+        showError("Please enter a task.");
+        return;
+    }
+    
+    if (dueDateInput.value === "") {
+        showError("Please select a due date.");
+        return;
+    }
+
 
     const newTask = {
         id: Date.now(),
@@ -87,6 +116,16 @@ function sortTasks() {
     });
 }
 
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    const options = {
+        day: "numeric",
+        month: "short",
+        year: "numeric"
+    };
+    return date.toLocaleDateString("en-NZ", options);
+}
+
 function renderTasks() {
 
     sortTasks();
@@ -113,10 +152,13 @@ function renderTasks() {
 
         <div class="Task_name">
             ${task.task}
-         </div>
+        </div>
 
         <div class="Task_due">
-            ${task.dueDate}
+            <input
+                type="date"
+                class="dueDateInput"
+                value="${task.dueDate}">
         </div>
 
         <div class="Task_priority">
@@ -157,6 +199,16 @@ function renderTasks() {
         task.priority = prioritySelect.value;
         renderTasks();
 
+    });
+
+    const dueDateInput = taskCard.querySelector(".dueDateInput");
+    dueDateInput.addEventListener("click", function () {
+        this.showPicker();
+    });
+
+    dueDateInput.addEventListener("change", function () {
+        task.dueDate = dueDateInput.value;
+        renderTasks();
     });
 
     const completeButton = taskCard.querySelector(".Todo_Complete_button");

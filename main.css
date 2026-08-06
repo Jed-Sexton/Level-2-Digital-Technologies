@@ -947,3 +947,31 @@ input::placeholder {
     cursor: pointer;
     outline: none;
 }
+
+.Task_error {
+  display: none;
+  background-color: #f8d7da;
+  color: #842029;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.Input_due input {
+  cursor: pointer;
+}
+
+.dueDateInput {
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
