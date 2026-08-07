@@ -975,3 +975,7 @@ input::placeholder {
   cursor: pointer;
   outline: none;
 }
+
+.Overdue_task {
+  background-color: #f3caca;
+}

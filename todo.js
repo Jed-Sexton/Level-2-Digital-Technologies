@@ -47,6 +47,14 @@ const addTaskButton = document.getElementById("addTask");
 const taskList = document.getElementById("taskList");
 const taskError = document.getElementById("taskError");
 
+const savedTasks = localStorage.getItem("tasks");
+
+if (savedTasks) {
+    tasks = JSON.parse(savedTasks);
+}
+
+renderTasks();
+
 addTaskButton.addEventListener("click", addTask);
 
 dueDateInput.addEventListener("click", function () {
@@ -59,6 +67,10 @@ function showError(message) {
     setTimeout(function(){
         taskError.style.display = "none";
     }, 3000);
+}
+
+function saveTasks() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 function addTask() {
@@ -89,6 +101,7 @@ function addTask() {
     };
 
     tasks.push(newTask);
+    saveTasks();
     renderTasks();
     taskInput.value = "";
     dueDateInput.value = "";
@@ -126,6 +139,17 @@ function formatDate(dateString) {
     return date.toLocaleDateString("en-NZ", options);
 }
 
+function isOverdue(task) {
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const dueDate = new Date(task.dueDate);
+    dueDate.setHours(0, 0, 0, 0);
+
+    return dueDate < today && task.status !== "Complete";
+}
+
 function renderTasks() {
 
     sortTasks();
@@ -140,6 +164,10 @@ function renderTasks() {
 
     if (task.status === "Complete") {
         taskCard.classList.add("Completed_task");
+    }
+    
+    if (isOverdue(task)) {
+        taskCard.classList.add("Overdue_task");
     }
 
       taskCard.innerHTML = `
@@ -191,12 +219,14 @@ function renderTasks() {
     const statusSelect = taskCard.querySelector(".statusSelect");
     statusSelect.addEventListener("change", function () {
         task.status = statusSelect.value;
+        saveTasks();
         renderTasks();
     });
 
     const prioritySelect = taskCard.querySelector(".prioritySelect");
     prioritySelect.addEventListener("change", function () {
         task.priority = prioritySelect.value;
+        saveTasks();
         renderTasks();
 
     });
@@ -208,12 +238,14 @@ function renderTasks() {
 
     dueDateInput.addEventListener("change", function () {
         task.dueDate = dueDateInput.value;
+        saveTasks();
         renderTasks();
     });
 
     const completeButton = taskCard.querySelector(".Todo_Complete_button");
     completeButton.addEventListener("click", function () {
         task.status = "Complete";
+        saveTasks();
         renderTasks();
 
     });
@@ -223,6 +255,7 @@ function renderTasks() {
         tasks = tasks.filter(function(currentTask) {
             return currentTask.id !== task.id;
         });
+        saveTasks();
         renderTasks();
     
     });
