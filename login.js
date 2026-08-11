@@ -16,5 +16,10 @@ loginButton.addEventListener("click", function() {
   } else {
     loginError.textContent = "Incorrect email or password.";
   }
+});
 
+passwordInput.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+      loginButton.click();
+  }
 });

@@ -7,16 +7,14 @@ body {
 }
 
 .Introduction {
-  background-color: white;
+  background-color: #97c5c6;
   font-family: 'Open Sans', sans-serif;
   border-radius: 50px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-right: 100px;
-  margin-left: 100px;
+  margin: 100px 0 100px 100px;
   padding: 40px;
   font-size: 20px;
   font-weight: 100;
+  color: #365655;
 }
 
 .Welcome_heading {
@@ -30,7 +28,7 @@ body {
 }
 
 .Welcome_navbar {
-  background-color: #4d7d7d;
+  background-color: #365655;
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
@@ -51,13 +49,13 @@ body {
 }
 
 .Website_name {
-  color: black;
+  color: #d9fafa;
   text-decoration: none;
   margin-right: 50px;
 }
 
 .Website_name:hover {
-  color: #d9fafa;
+  color: #97c5c6;
 }
 
 .Navbar_button {
@@ -68,33 +66,30 @@ body {
   margin-bottom: 0px;
   text-align: right;
   font-weight: bold;
-  color: black;
+  color: #d9fafa;
   text-decoration: none;
 }
 
 .Invisible_underscore {
-  color: #4d7d7d;
+  color: #365655;
 }
 
 .Navbar_button:hover {
-  color: #d9fafa;
+  color: #97c5c6;
 }
 
 .Welcome_images {
   display: flex;
-  gap: 10px;
-  max-width: 1000px;
-  width: 20vw;
   flex-direction: column;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  margin-right: 100px;
   justify-content: space-between;
+  margin: 100px 100px 100px 0;
+  gap: 20px;
 }
 
 .Welcome_images img {
-  border-radius: 1000px;
+  width: 100%;
   height: auto;
+  border-radius: 1000px;
 }
 
 @media (max-width: 768px) {
@@ -104,12 +99,14 @@ body {
 }
 
 .Main_content {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 20vw;
+  gap: 50px;
+  align-items: stretch;
 }
 
 .Footer {
-  background-color: #4d7d7d;
+  background-color: #365655;
   margin-bottom: 0px;
   margin-right: 0px;
   margin-left: 0px;
@@ -143,6 +140,7 @@ body {
   display: block;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  color: #d9fafa
 }
 
 .Footer_slogan {
@@ -150,36 +148,37 @@ body {
   margin-top: 0px;
   margin-bottom: 0px;
   display: block;
+  color: #d9fafa;
 }
 
 .Footer_link {
-  color: black;
+  color: #d9fafa;
   text-decoration: none;
   font-size: 20px;
   display: inline-block;
 }
 
 .Footer_link:hover {
-  color: #d9fafa;
+  color: #97c5c6;
 }
 
 .Footer_second_column {
-  color: black;
+  color: #d9fafa;
 }
 
 .Second_footer_links {
-  color: black;
+  color: #d9fafa;
   text-decoration: none;
   font-size: 20px;
   display: inline-block;
 }
 
 .Second_footer_links:hover {
-  color: #d9fafa;
+  color: #97c5c6;
 }
 
 .Footer_third_column {
-  color: black;
+  color: #d9fafa;
 }
 
 .Third_footer_text {
@@ -187,11 +186,12 @@ body {
   margin-top: 0px;
   margin-bottom: 0px;
   display: block;
+  color: #d9fafa
 }
 
 .Home_welcome {
   font-family: 'Open Sans', sans-serif;
-  color: black;
+  color: #365655;
   font-weight: bold;
   font-size: 30px;
   margin-left: 50px;
@@ -202,6 +202,7 @@ body {
 .Quote_attribution {
   font-weight: normal;
   font-size: 20px;
+  color: #365655
 }
 
 .Home_images {
@@ -232,7 +233,7 @@ body {
 }
 
 .Current_screen_navbar_button {
-  color: #d9fafa;
+  color: #97c5c6;
   font-size: 20px;
   font-family: 'Open Sans', sans-serif;
   margin-right: 50px;
@@ -299,19 +300,20 @@ body {
 }
 
 .Popup_box {
-  background: white;
+  background: #d9fafa;
   width: 500px;
   padding: 40px;
   border-radius: 30px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   font-family: 'Open Sans', sans-serif;
+  color: #365655;
 }
 
 .Close_button {
   margin-top: 25px;
-  background: #4d7d7d;
-  color: white;
+  background: #365655;;
+  color: #d9fafa;
   border: none;
   padding: 12px 30px;
   border-radius: 15px;
@@ -391,14 +393,14 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 6vw;
   font-weight: bold;
-  color: black;
+  color: #365655;
 }
 
 .Timer_focus {
   font-family: 'Open Sans', sans-serif;
   font-size: 2vw;
   font-weight: normal;
-  color: black;
+  color: #365655;
   margin-top: 10px;
 }
 
@@ -432,7 +434,7 @@ body {
 
 .Home_welcome_centre {
   font-family: 'Open Sans', sans-serif;
-  color: black;
+  color: #365655;
   font-weight: bold;
   font-size: 30px;
   width: 90%;
@@ -451,8 +453,8 @@ body {
   transform: translateX(-50%);
   display: none;
   flex-direction: column;
-  background: white;
-  border: 2px solid #4d7d7d;
+  background: #d9fafa;
+  border: 2px solid #365655;
   border-radius: 12px;
 }
 
@@ -462,10 +464,11 @@ body {
   text-align: center;
   cursor: pointer;
   font-size: clamp(14px, 1.2vw, 18px);
+  color: #365655;
 }
 
 .Duration_option:hover {
-  background-color: #d9fafa;
+  background-color: #97c5c6;
   border-radius: 12px;
 }
 
@@ -483,14 +486,16 @@ body {
   padding: 20px 0;
   min-height: 600px;
   margin-left: 0px;
+  color: #365655;
 }
 
 .Notes_editor {
   flex: 1;
-  background-color: white;
+  background-color: #97c5c6;
   border-radius: 20px;
   padding: 30px;
   min-height: 600px;
+  color: #365655;
 }
 
 .Note_title {
@@ -557,10 +562,12 @@ body {
   font-weight: bold;
   font-size: 24px;
   cursor: pointer;
+  color: #365655;
 }
 
 .New_note_button:hover {
-  background-color: #4d7d7d;
+  background-color: #365655;
+  color: #d9fafa;
 }
 
 
@@ -582,7 +589,8 @@ body {
 
 
 .Note_item:hover {
-  background-color: #4d7d7d;
+  background-color: #365655;
+  color: #d9fafa;
 }
 
 .Save_button {
@@ -590,19 +598,21 @@ body {
   padding: 12px 30px;
   border: none;
   border-radius: 50px;
-  background-color: #97c5c6;
+  background-color: #365655;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
+  color: #d9fafa
 }
 
 .Save_button:hover {
-  background-color: #4d7d7d;
+  background-color: #3b6666;
+  transform: scale(1.02);
 }
 
 .Active_note {
-  background-color: #4d7d7d;
-  color: white;
+  background-color: #365655;
+  color: #d9fafa;
 }
 
 .Delete_button {
@@ -611,14 +621,24 @@ body {
   padding: 12px 30px;
   border: none;
   border-radius: 50px;
-  background-color: #97c5c6;
+  background-color: #365655;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
+  color: #d9fafa;
+}
+
+.Note_content {
+  color: #365655;
+}
+
+.Note_title {
+  color: #365655;
 }
 
 .Delete_button:hover {
-  background-color: #4d7d7d;
+  background-color: #3b6666;
+  transform: scale(1.02);
 }
 
 .Login_box {
@@ -634,6 +654,7 @@ body {
   font-size: 40px;
   margin-bottom: 20px;
   font-weight: bold;
+  color: #365655;
 }
 
 .Login_subtitle {
@@ -641,6 +662,7 @@ body {
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
+  color: #365655;
 }
 
 .Login_input {
@@ -653,6 +675,8 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 35px;
   outline: none;
+  color: #365655;
+  background-color: #d9fafa;
 }
 
 .Login_button {
@@ -662,8 +686,8 @@ body {
   padding: 12px 15px;
   border: none;
   border-radius: 50px;
-  background-color: #4d7d7d;
-  color: black;
+  background-color: #365655;
+  color: #d9fafa;
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -683,7 +707,7 @@ body {
 .Login_error {
   margin-top: 15px;
   text-align: center;
-  color: #8a1916;
+  color: #842029;
   font-weight: bold;
   min-height: 20px;
 }
@@ -714,13 +738,13 @@ body {
 
 .Task_input_card input,
 .Task_input_card select {
-    background-color: #97c5c6;
-    padding: 10px;
-    border: none;
-    border-radius: 15px;
-    font-size: 15px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+  background-color: #97c5c6;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
 }
 
 .Task_card {
@@ -732,6 +756,19 @@ body {
   align-items: center;
   gap: 15px;
   box-sizing: border-box;
+}
+
+.Add_Task_titles {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  margin-bottom: 12px;
+  gap: 15px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #4d7d7d;
+  letter-spacing: 1px;
+  margin-right: 218px;
 }
 
 .Completed_task {
@@ -788,46 +825,48 @@ input::placeholder {
 
 #addTask {
   width: 100%;
-    padding: 12px 20px;
-    background-color: #4d7d7d;
-    color: black;
-    border: none;
-    border-radius: 50px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  padding: 12px 20px;
+  background-color: #365655;
+  color: #d9fafa;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 #addTask:hover {
   transform: scale(1.05);
+  background-color:#3b6666;
 }
 
 .Todo_Complete_button,
 .Todo_Delete_button {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    background: none;
-    border: none;
-    border-radius: 100px;
-    font-size: 22px;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1;
-    cursor: pointer;
-    color: black;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
+  border-radius: 100px;
+  font-size: 22px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1;
+  cursor: pointer;
+  color: #365655;
 }
 
 .Todo_Complete_button:hover,
 .Todo_Delete_button:hover {
-    transform: scale(1.15);
-    background-color: #4d7d7d;
-    transition: all 0.2s ease;
+  transform: scale(1.15);
+  background-color: #365655;
+  color: #d9fafa;
+  transition: all 0.2s ease;
 }
 
 .Task_titles {
@@ -896,23 +935,23 @@ input::placeholder {
 .Input_due input,
 .Input_priority select,
 .Input_button button {
-    width: 100%;
-    box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .Input_due,
 .Title_due {
-    width: 140px;
-    text-align: center;
+  width: 140px;
+  text-align: center;
 }
 
 @media (max-width: 1000px) {
 
   .Task_input_card {
-      flex-direction: column;
-      align-items: stretch;
-      border-radius: 30px;
-      padding: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 30px;
+    padding: 20px;
   }
 
   .Input_subject,
@@ -920,13 +959,70 @@ input::placeholder {
   .Input_due,
   .Input_priority,
   .Input_button {
-      width: 100%;
+    width: 100%;
   }
 
   .Todo_page {
     padding: 0 15px;
     box-sizing: border-box;
-}
+  }
+
+  .Add_Task_titles,
+  .Task_titles {
+    display: none;
+  }
+
+  .Task_card {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .Task_subject {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .Task_name {
+    width: 100%;
+    text-align: center;
+  }
+
+  .Task_due {
+    width: 100%;
+    text-align: center;
+  }
+
+  .Task_priority {
+    width: 100%;
+    text-align: center;
+  }
+
+  .Task_priority select {
+    text-align: center;
+  }
+
+  .Task_status {
+    width: 100%;
+    text-align: center;
+  }
+
+  .Task_status select {
+    text-align: center;
+  }
+
+  .Todo_Complete_button,
+  .Todo_Delete_button {
+    margin: 0;
+  }
+
+  .Add_Task_titles,
+  .Task_titles {
+    display: none;
+  }
 }
 
 .Task_list {
@@ -948,9 +1044,33 @@ input::placeholder {
     outline: none;
 }
 
+input,
+select,
+button,
+textarea {
+    color: #365655;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #365655;
+    opacity: 1;
+}
+
+.Task_heading,
+.Task_titles,
+.Add_Task_titles {
+    color: #365655;
+}
+
+.Task_subject,
+.Task_name {
+    color: #365655;
+}
+
 .Task_error {
   display: none;
-  background-color: #f8d7da;
+  background-color: #f3caca;
   color: #842029;
   padding: 12px 25px;
   border-radius: 50px;

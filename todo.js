@@ -1,26 +1,26 @@
 let tasks = [];
 
 const colours = {
-    blue: "#4A90E2",
-    red: "#E74C3C",
-    green: "#4CAF50",
-    yellow: "#F1C40F",
-    navy: "#2C3E8F",
-    purple: "#9B59B6",
-    orange: "#E67E22",
-    teal: "#26A69A",
-    pink: "#EC6BAA"
+    blue: "#8BB8D9",
+    red: "#D99A9A",
+    green: "#9BC5A3",
+    yellow: "#D9C77E",
+    navy: "#8F9CC7",
+    purple: "#B39AC9",
+    orange: "#D9A77E",
+    teal: "#8FC5BE",
+    pink: "#D9A1B8"
 };
 
 const subjectColours = {
-    "Mathematics": colours.blue,
+    "Maths": colours.blue,
     "English": colours.red,
     "Biology": colours.green,
     "Chemistry": colours.yellow,
     "Physics": colours.navy,
-    "Digital Technologies": colours.purple,
-    "Design & Visual Communication": colours.orange,
-    "Physical Education": colours.teal,
+    "DIT": colours.purple,
+    "DVC": colours.orange,
+    "PE": colours.teal,
     "Health": colours.green,
     "Music": colours.pink,
     "Geography": colours.green,
@@ -30,7 +30,7 @@ const subjectColours = {
     "Design": colours.orange,
     "Painting": colours.pink,
     "Photography": colours.blue,
-    "Religious Education": colours.purple
+    "RE": colours.purple
 };
 
 const statusOrder = {
@@ -262,3 +262,12 @@ function renderTasks() {
 
     });
 }
+
+[subjectInput, taskInput, dueDateInput, priorityInput].forEach(function(input) {
+    input.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            input.blur();
+        }
+    });
+});

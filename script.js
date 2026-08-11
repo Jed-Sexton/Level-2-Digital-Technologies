@@ -256,7 +256,7 @@ function updateTimer() {
 
     clearInterval(timerInterval);
     timerRunning = false;
-    playPauseImage.src = "Website_Images/2DIGT_Timer_Paused.png";
+    playPauseImage.src = "Website_Images/2DIGT_Study_Timer_Paused.png";
 
   }
 
@@ -276,13 +276,13 @@ playPauseButton.addEventListener("click", function() {
   if (timerRunning === false) {
 
     timerRunning = true;
-    playPauseImage.src = "Website_Images/2DIGT_Timer_Playing.png";
+    playPauseImage.src = "Website_Images/2DIGT_Study_Timer_Playing.png";
     timerInterval = setInterval(updateTimer, 1000);
 
   } else {
 
     timerRunning = false;
-    playPauseImage.src = "Website_Images/2DIGT_Timer_Paused.png";
+    playPauseImage.src = "Website_Images/2DIGT_Study_Timer_Paused.png";
     clearInterval(timerInterval);
 
   }
@@ -299,7 +299,7 @@ resetButton.addEventListener("click", function() {
   let seconds = remainingTime % 60;
   timerDisplay.textContent =
     minutes + ":" + String(seconds).padStart(2, "0");
-  playPauseImage.src = "Website_Images/2DIGT_Timer_Paused.png";
+  playPauseImage.src = "Website_Images/2DIGT_Study_Timer_Paused.png";
 
 });
 
