@@ -8,7 +8,7 @@
 <body>
   <div class="Welcome_navbar">
     <div class="Welcome_name"> 
-      <a class="Website_name" href="index.html">planR</a>
+      <a class="Website_name" href="home.html">planR</a>
     </div>
     <div>
       <a class="Navbar_button" href="home.html">DASHBOARD</a>
@@ -16,7 +16,15 @@
       <a class="Navbar_button" href="timer.html">STUDY<span class="Invisible_underscore">.</span>TIMER</a>
       <a class="Navbar_button" href="notes.html">NOTEPAD</a>
       <a class="Current_screen_navbar_button" href="equipment.html">EQUIPMENT</a>
-      <a class="Navbar_button" href="index.html">LOG OUT</a>
+      <div class="Navbar_profile_container">
+        <button class="Navbar_profile_image" id="Profile_button">
+          <img class="Profile_default" src="Website_Images/2DIGT_Profile.png">
+          <img class="Profile_hover" src="Website_Images/2DIGT_Profile_Hover.png">
+        </button>
+        <div class="Profile_dropdown" id="Profile_dropdown">
+          <a href="index.html">Log out</a>
+        </div>
+      </div>
     </div>
   </div>
   <main>
@@ -104,8 +112,6 @@
       <span class="Second_footer_title">LINKS</span>
       <br>
       <br>
-      <a class="Second_footer_links" href="index.html">HOME</a>
-      <br>
       <a class="Second_footer_links" href="home.html">DASHBOARD</a>
       <br>
       <a class="Second_footer_links" href="todo.html">TO DO</a>
@@ -130,5 +136,6 @@
     </div>
   </div>
   <script src="script.js"></script>
+  <script src="navbar.js"></script>
 </body>
 </html>
